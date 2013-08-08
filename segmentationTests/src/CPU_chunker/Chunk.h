@@ -13,7 +13,7 @@
 #define CHUNK_H_
 #include <iostream>
 #include <boost/shared_ptr.hpp>
-#include "../etc/DedupDefines.h"
+#include "../rabin_chunking_code/etc/DedupDefines.h"
 #include <iomanip>
 #include "stdio.h"
 

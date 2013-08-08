@@ -21,7 +21,12 @@
 					<folderInfo id="com.nvidia.cuda.ide.configuration.debug.999250404." name="/" resourcePath="">
 						<toolChain id="com.nvidia.cuda.ide.toolchain.base.255155854" name="CUDA Toolkit 5.5" superClass="com.nvidia.cuda.ide.toolchain.base">
 							<targetPlatform archList="all" binaryParser="com.nvidia.cuda.ide.elf;com.nvidia.cuda.ide.macho;com.nvidia.cuda.ide.cubin" id="com.nvidia.cuda.ide.targetPlatform.1190074695" isAbstract="false" name="Debug Platform" osList="linux,macosx" superClass="com.nvidia.cuda.ide.targetPlatform"/>
-							<builder buildPath="${workspace_loc:/segmentationTests}/Debug" id="com.nvidia.cuda.ide.builder.1470740116" keepEnvironmentInBuildfile="false" name="CUDA Toolkit 5.5 Builder" superClass="com.nvidia.cuda.ide.builder"/>
+							<builder buildPath="${workspace_loc:/segmentationTests}/Debug" id="com.nvidia.cuda.ide.builder.1470740116" keepEnvironmentInBuildfile="false" name="CUDA Toolkit 5.5 Builder" superClass="com.nvidia.cuda.ide.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
 							<tool id="nvcc.compiler.base.750248580" name="NVCC Compiler" superClass="nvcc.compiler.base">
 								<option id="nvcc.compiler.deviceDebug.2003404361" name="Generate device debug information (-G)" superClass="nvcc.compiler.deviceDebug" value="true" valueType="boolean"/>
 								<option id="nvcc.compiler.option.level.1063764711" name="Generate host debug information (-g)" superClass="nvcc.compiler.option.level" value="true" valueType="boolean"/>
@@ -46,15 +51,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.nvidia.cuda.ide.configuration.debug.999250404.761736418" name="testDeduplicationEfficiency.cpp" rcbsApplicability="disable" resourcePath="src/testDeduplicationEfficiency.cpp" toolsToInvoke="nvcc.compiler.base.750248580.40077076">
-						<tool id="nvcc.compiler.base.750248580.40077076" name="NVCC Compiler" superClass="nvcc.compiler.base.750248580">
-							<inputType id="nvcc.compiler.input.cu.1874517638" superClass="nvcc.compiler.input.cu"/>
-							<inputType id="nvcc.compiler.input.cpp.984046718" superClass="nvcc.compiler.input.cpp"/>
-							<inputType id="nvcc.compiler.input.c.1754908157" superClass="nvcc.compiler.input.c"/>
-						</tool>
-					</fileInfo>
 					<sourceEntries>
-						<entry excluding="src|CPU_chunker" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="CPU_chunker|src|rabin_chunking_code" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="testDeduplicationEfficiency.cpp|hello.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
@@ -107,9 +105,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="CPU_chunker|src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="CPU_chunker" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="rabin_chunking_code|CPU_chunker|src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="rabin_chunking_code|CPU_chunker" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/CPU_chunker"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/rabin_chunking_code"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
