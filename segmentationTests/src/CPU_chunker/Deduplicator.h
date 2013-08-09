@@ -24,7 +24,8 @@ using namespace boost;
 
 class Deduplicator {
 public:
-	Deduplicator(string name) {
+	Deduplicator(string name) {a
+
 		this->name = name;
 		this->original = 0; // stores how much data has been passed to the system
 		this->deduplicated = 0; // sores how much data has been deduplicated  (actually written to disk)
